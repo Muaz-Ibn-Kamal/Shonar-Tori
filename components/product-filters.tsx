@@ -143,16 +143,16 @@ export function ProductFilters({ onFilterChange }: ProductFiltersProps) {
         <CardContent className="space-y-3">
           {categories.map((category) => (
             <div key={category.id} className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2">
                 <Checkbox
                   id={category.id}
                   checked={filters.categories.includes(category.id)}
-                  onCheckedChange={(checked) => handleCategoryChange(category.id, checked as boolean)}
+                  onCheckedChange={(checked: boolean | "indeterminate") => handleCategoryChange(category.id, checked as boolean)}
                 />
                 <label htmlFor={category.id} className="body-sans text-sm cursor-pointer">
                   {category.label}
                 </label>
-              </div>
+                </div>
               <span className="body-sans text-xs text-muted-foreground">({category.count})</span>
             </div>
           ))}
@@ -167,16 +167,16 @@ export function ProductFilters({ onFilterChange }: ProductFiltersProps) {
         <CardContent className="space-y-3">
           {materials.map((material) => (
             <div key={material.id} className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2">
                 <Checkbox
                   id={material.id}
                   checked={filters.materials.includes(material.id)}
-                  onCheckedChange={(checked) => handleMaterialChange(material.id, checked as boolean)}
+                  onCheckedChange={(checked: boolean | "indeterminate") => handleMaterialChange(material.id, checked as boolean)}
                 />
                 <label htmlFor={material.id} className="body-sans text-sm cursor-pointer">
                   {material.label}
                 </label>
-              </div>
+                </div>
               <span className="body-sans text-xs text-muted-foreground">({material.count})</span>
             </div>
           ))}
@@ -212,16 +212,16 @@ export function ProductFilters({ onFilterChange }: ProductFiltersProps) {
         <CardContent className="space-y-3">
           {regions.map((region) => (
             <div key={region.id} className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2">
                 <Checkbox
                   id={region.id}
                   checked={filters.regions.includes(region.id)}
-                  onCheckedChange={(checked) => handleRegionChange(region.id, checked as boolean)}
+                  onCheckedChange={(checked: boolean | "indeterminate") => handleRegionChange(region.id, checked as boolean)}
                 />
                 <label htmlFor={region.id} className="body-sans text-sm cursor-pointer">
                   {region.label}
                 </label>
-              </div>
+                </div>
               <span className="body-sans text-xs text-muted-foreground">({region.count})</span>
             </div>
           ))}

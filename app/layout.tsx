@@ -19,9 +19,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Shonar Tori - Timeless Fashion, Timeless Values",
+  title: "Shonar Tori ",
   description: "Sustainable fashion celebrating Bengali heritage and artisan craftsmanship. Where style meets purpose.",
-  generator: "v0.app",
+  generator: "",
   keywords: "sustainable fashion, Bengali heritage, artisan craftsmanship, handwoven, traditional textiles",
 }
 
