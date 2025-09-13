@@ -105,7 +105,7 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="body-sans text-sm opacity-80 text-center md:text-left">
-            © 2024 Shonar Tori. All rights reserved. Crafted with love in Bangladesh.
+            © 2025 Shonar Tori. All rights reserved. Crafted with love in Bangladesh.
           </p>
           <div className="flex space-x-6">
             <Link href="/privacy" className="body-sans text-sm opacity-80 hover:text-accent transition-colors">
