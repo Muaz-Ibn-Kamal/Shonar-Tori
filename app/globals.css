@@ -1,0 +1,168 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Shonar Tori Brand Colors */
+  --emerald-deep: #065f46;
+  --golden-yellow: #fbbf24;
+  --pure-white: #ffffff;
+
+  /* Updated theme with Bengali colors */
+  --background: var(--pure-white);
+  --foreground: var(--emerald-deep);
+  --card: var(--pure-white);
+  --card-foreground: var(--emerald-deep);
+  --popover: var(--pure-white);
+  --popover-foreground: var(--emerald-deep);
+  --primary: var(--emerald-deep);
+  --primary-foreground: var(--pure-white);
+  --secondary: #f0fdf4;
+  --secondary-foreground: var(--emerald-deep);
+  --muted: #f7fee7;
+  --muted-foreground: #374151;
+  /* Darkened accent color for better contrast while keeping golden theme */
+  --accent: #d97706;
+  --accent-foreground: var(--emerald-deep);
+  --destructive: #dc2626;
+  --destructive-foreground: var(--pure-white);
+  --border: #d1d5db;
+  --input: #f9fafb;
+  --ring: var(--golden-yellow);
+  --chart-1: var(--emerald-deep);
+  --chart-2: var(--golden-yellow);
+  --chart-3: #10b981;
+  --chart-4: #fcd34d;
+  --chart-5: #059669;
+  --radius: 0.625rem;
+  --sidebar: var(--pure-white);
+  --sidebar-foreground: var(--emerald-deep);
+  --sidebar-primary: var(--emerald-deep);
+  --sidebar-primary-foreground: var(--pure-white);
+  --sidebar-accent: #f0fdf4;
+  --sidebar-accent-foreground: var(--emerald-deep);
+  --sidebar-border: #d1d5db;
+  --sidebar-ring: var(--golden-yellow);
+}
+
+.dark {
+  --background: var(--emerald-deep);
+  --foreground: var(--pure-white);
+  --card: #064e3b;
+  --card-foreground: var(--pure-white);
+  --popover: #064e3b;
+  --popover-foreground: var(--pure-white);
+  --primary: var(--golden-yellow);
+  --primary-foreground: var(--emerald-deep);
+  --secondary: #065f46;
+  --secondary-foreground: var(--pure-white);
+  --muted: #047857;
+  --muted-foreground: #d1fae5;
+  --accent: #d97706;
+  --accent-foreground: var(--emerald-deep);
+  --destructive: #ef4444;
+  --destructive-foreground: var(--pure-white);
+  --border: #047857;
+  --input: #065f46;
+  --ring: var(--golden-yellow);
+  --chart-1: var(--golden-yellow);
+  --chart-2: var(--pure-white);
+  --chart-3: #34d399;
+  --chart-4: #fde047;
+  --chart-5: #10b981;
+  --sidebar: #064e3b;
+  --sidebar-foreground: var(--pure-white);
+  --sidebar-primary: var(--golden-yellow);
+  --sidebar-primary-foreground: var(--emerald-deep);
+  --sidebar-accent: #065f46;
+  --sidebar-accent-foreground: var(--pure-white);
+  --sidebar-border: #047857;
+  --sidebar-ring: var(--golden-yellow);
+}
+
+@theme inline {
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Bengali pattern decorative elements */
+  .bengali-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fbbf24' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .golden-border {
+    border-image: linear-gradient(45deg, #fbbf24, #f59e0b) 1;
+  }
+}
+
+/* Custom animations for cultural elements */
+@keyframes weave {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.weave-animation {
+  animation: weave 3s ease-in-out infinite;
+}
+
+/* Typography classes */
+.heading-serif {
+  font-family: var(--font-playfair);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.body-sans {
+  font-family: var(--font-inter);
+  line-height: 1.6;
+}
